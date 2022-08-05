@@ -5,6 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
+  releaseName: nginx-ingress-controller
   chart:
     spec:
       chart: nginx-ingress
