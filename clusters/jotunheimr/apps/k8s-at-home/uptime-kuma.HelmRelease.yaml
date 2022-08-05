@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: uptime-kuma
+  namespace: flux-system
+spec:
+  interval: 1m
+  releaseName: uptime-kuma
+  chart:
+    spec:
+      chart: uptime-kuma
+      version: '1.4.x'
+      sourceRef:
+        kind: HelmRepository
+        name: k8s-at-home
+        namespace: flux-system
+      interval: 1m
+  targetNamespace: uptime-kuma
+  install:
+    createNamespace: true
+  values:
+      ingress:
+        main:
+          enabled: true
