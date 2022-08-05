@@ -21,6 +21,7 @@ spec:
   values:
     controller:
       replicaCount: 3
+      healthStatus: true
       service:
         type: NodePort
         httpPort:
