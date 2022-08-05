@@ -18,4 +18,10 @@ spec:
     createNamespace: true
   values:
     controller:
-      replicaCount: 2
+      replicaCount: 3
+      service:
+        type: NodePort
+        httpPort:
+          nodePort: 30080
+        httpsPort:
+          nodePort: 30443
