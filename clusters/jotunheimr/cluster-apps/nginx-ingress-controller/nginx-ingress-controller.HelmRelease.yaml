@@ -25,6 +25,6 @@ spec:
       service:
         type: NodePort
         httpPort:
-          nodePort: 8080
+          nodePort: 30081
         httpsPort:
-          nodePort: 4443
+          nodePort: 30444
