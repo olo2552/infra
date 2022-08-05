@@ -7,12 +7,14 @@ spec:
   interval: 1m
   chart:
     spec:
+      releaseName: nginx-ingress-controller
       chart: nginx-ingress
       version: '0.14.x'
+      targetNamespace: nginx-ingress-controller
       sourceRef:
         kind: HelmRepository
         name: nginx
-        namespace: nginx-ingress-controller
+        namespace: flux-system
       interval: 1m
   install:
     createNamespace: true
